@@ -18,6 +18,7 @@ namespace CompleteProject
             playerHealth = player.GetComponent <PlayerHealth> ();
             enemyHealth = GetComponent <EnemyHealth> ();
             nav = GetComponent <NavMeshAgent> ();
+			nav.acceleration = 0.25f;
         }
 
 
