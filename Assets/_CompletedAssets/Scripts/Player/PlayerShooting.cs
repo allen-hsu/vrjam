@@ -20,7 +20,7 @@ namespace CompleteProject
         Light gunLight;                                 // Reference to the light component.
 		public Light faceLight;								// Duh
         float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
-
+		MicInput micInput;
 
         void Awake ()
         {
@@ -32,6 +32,8 @@ namespace CompleteProject
             gunLine = GetComponent <LineRenderer> ();
             gunAudio = GetComponent<AudioSource> ();
             gunLight = GetComponent<Light> ();
+			micInput = GetComponentInParent<MicInput> ();
+			//micInput = 
 			//faceLight = GetComponentInChildren<Light> ();
         }
 
@@ -42,15 +44,19 @@ namespace CompleteProject
             timer += Time.deltaTime;
 
 #if !MOBILE_INPUT
+			//Debug.Log (" Sound " + MicInput.MicLoudness);
             // If the Fire1 button is being press and it's time to fire...
-			if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+			if( (Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0) ||
+			   MicInput.MicLoudness > 0.01f)
             {
                 // ... shoot the gun.
+
                 Shoot ();
             }
 #else
             // If there is input on the shoot direction stick and it's time to fire...
-            if ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)
+            if ( ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)) ||
+				MicInput.MicLoudness > 0.01f)
             {
                 // ... shoot the gun
                 Shoot();

@@ -21,8 +21,6 @@ namespace CompleteProject
         PlayerShooting playerShooting;                              // Reference to the PlayerShooting script.
         bool isDead;                                                // Whether the player is dead.
         bool damaged;                                               // True when the player gets damaged.
-
-
         void Awake ()
         {
             // Setting up the references.

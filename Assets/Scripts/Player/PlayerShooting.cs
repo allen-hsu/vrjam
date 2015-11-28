@@ -34,7 +34,7 @@ public class PlayerShooting : MonoBehaviour
 
 		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
-            Shoot ();
+            //Shoot ();
         }
 
         if(timer >= timeBetweenBullets * effectsDisplayTime)
