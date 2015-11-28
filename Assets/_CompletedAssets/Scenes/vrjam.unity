@@ -15,11 +15,11 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 1
-  m_FogColor: {r: .0666666701, g: .172549024, b: .294117659, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: .0299999993
+  m_FogDensity: .200000003
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 20
   m_AmbientSkyColor: {r: .343283594, g: .343283594, b: .343283594, a: 1}
   m_AmbientEquatorColor: {r: .343283594, g: .343283594, b: .343283594, a: 1}
   m_AmbientGroundColor: {r: .343283594, g: .343283594, b: .343283594, a: 1}
@@ -38008,11 +38008,11 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1647235997}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300000, guid: 5b84db49d40ea449aa4f3e3bd229ab5b,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4fff99673a41e24439d527ad0bd6b569, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ab1cf7298e0f247418f74402b5d2f328, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -42934,7 +42934,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 10
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -44251,7 +44251,7 @@ Camera:
     width: .5
     height: 1
   near clip plane: .300000012
-  far clip plane: 10
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -45277,7 +45277,7 @@ Camera:
     width: .5
     height: 1
   near clip plane: .300000012
-  far clip plane: 10
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
