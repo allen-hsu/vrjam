@@ -47,7 +47,7 @@ namespace CompleteProject
 			//Debug.Log (" Sound " + MicInput.MicLoudness);
             // If the Fire1 button is being press and it's time to fire...
 			if( (Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0) ||
-			   MicInput.MicLoudness > 0.01f)
+			   (MicInput.MicLoudness > 0.025f && timer >= timeBetweenBullets))
             {
                 // ... shoot the gun.
 
@@ -56,7 +56,7 @@ namespace CompleteProject
 #else
             // If there is input on the shoot direction stick and it's time to fire...
             if ( ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)) ||
-				MicInput.MicLoudness > 0.01f)
+				(MicInput.MicLoudness > 0.01f && timer >= timeBetweenBullets))
             {
                 // ... shoot the gun
                 Shoot();
